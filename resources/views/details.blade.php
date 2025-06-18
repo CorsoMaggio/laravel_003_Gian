@@ -5,6 +5,10 @@
                 background-color: azure !important;
             }
 
+            .nav-link.active {
+                background-color: white !important;
+            }
+
             .card {
                 background-color: azure !important;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);

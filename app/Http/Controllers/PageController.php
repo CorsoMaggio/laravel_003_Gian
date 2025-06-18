@@ -81,4 +81,22 @@ class PageController extends Controller
         }
         abort(404);
     }
+
+    public function contacts()
+    {
+        return view('contact');
+    }
+
+    public function send(Request $request)
+    {
+        $request->validate(
+            [
+                'firstname' => ['required', 'max:20'],
+                'lastname' => ['required'],
+                'email' => ['required', 'email'],
+                'text' => ['required', 'min:10', 'max:500'],
+            ]
+            );
+        dd($request->all());
+    }
 }
